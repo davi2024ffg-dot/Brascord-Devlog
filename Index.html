@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brascord | Dev Log</title>
+    
+    <!-- Importando o CSS oficial do Brascord verbatim -->
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* Estilos específicos para o Dev Log (GitHub Pages) */
+        body {
+            /* Sobrescrevendo o overflow: hidden do app para a página do site rolar */
+            overflow: auto !important;
+            background: linear-gradient(125deg, #063d2f 0%, #0a8b52 40%, #1688d8 70%, #d8b600 100%);
+            background-attachment: fixed;
+            background-size: 200% 200%;
+            animation: authGradient 15s ease infinite alternate;
+            font-family: 'Inter', "Segoe UI", sans-serif;
+            color: #f5fff8;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        .devlog-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 40px;
+            background: rgba(5, 34, 27, 0.75);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 28px;
+            box-shadow: 0 35px 100px rgba(0, 0, 0, 0.5);
+            position: relative;
+            z-index: 10;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .header h1 {
+            font-size: clamp(40px, 6vw, 64px);
+            font-weight: 1000;
+            margin: 0 0 10px 0;
+            background: linear-gradient(90deg, #1688d8, #1caf4b, #ffd11a);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: -2px;
+        }
+
+        .header p {
+            color: #a9c2b8;
+            font-size: 18px;
+            margin: 0;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(255, 209, 26, 0.15);
+            color: #ffd11a;
+            border: 1px solid rgba(255, 209, 26, 0.3);
+            padding: 8px 16px;
+            border-radius: 12px;
+            font-weight: 900;
+            font-size: 14px;
+            margin-top: 20px;
+            box-shadow: 0 0 20px rgba(255, 209, 26, 0.2);
+        }
+
+        .authors {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #cde1d9;
+        }
+        
+        .authors strong {
+            color: #1caf4b;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 900;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 10px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title::before {
+            content: "";
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #1688d8;
+            box-shadow: 0 0 12px #1688d8;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .glass-card {
+            background: linear-gradient(160deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.015));
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 20px;
+            padding: 24px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.25);
+        }
+
+        .glass-card h3 {
+            margin: 0 0 12px 0;
+            color: #ffd11a;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .glass-card p {
+            color: #cde1d9;
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        .update-log {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 16px;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .log-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+        }
+
+        .log-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .version {
+            font-weight: 900;
+            color: #1caf4b;
+            background: rgba(28, 175, 75, 0.15);
+            padding: 4px 10px;
+            border-radius: 8px;
+            height: fit-content;
+        }
+        
+        .log-content h4 {
+            margin: 0 0 5px 0;
+            color: #f5fff8;
+        }
+
+        .log-content p {
+            margin: 0;
+            font-size: 13px;
+            color: #a9c2b8;
+        }
+
+        @media (max-width: 768px) {
+            .devlog-container {
+                margin: 15px;
+                padding: 25px;
+            }
+            .header h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Fundo animado padrão do Brascord -->
+    <div class="background liquid-animated">
+        <div class="blur-line line-one"></div>
+        <div class="blur-line line-two"></div>
+        <div class="blur-line line-three"></div>
+        <div class="star star-1"></div>
+        <div class="star star-2"></div>
+        <div class="star star-3"></div>
+        <div class="star star-4"></div>
+    </div>
+
+    <div class="devlog-container">
+        <header class="header">
+            <h1>Brascord</h1>
+            <p>O seu novo ecossistema brasileiro de comunicação.</p>
+            <div class="authors">Desenvolvido por <strong>Davi Alves</strong> & <strong>Vinícios F</strong></div>
+            <div class="badge"> Lançamento da Versão Demo: Final de Setembro!</div>
+        </header>
+
+        <h2 class="section-title">O que já temos no projeto?</h2>
+        
+        <div class="features-grid">
+            <div class="glass-card">
+                <h3> Chat & Mensagens</h3>
+                <p>Sistema de mensagens completo com suporte a reações, painel de emojis, encaminhamento de mensagens, envio de anexos (imagens, vídeos, áudio e arquivos), e indicador de gravação de áudio com waveform nativo.</p>
+            </div>
+            
+            <div class="glass-card">
+                <h3> Áudio e Vídeo</h3>
+                <p>Interface de chamadas (floating card) altamente polida, com suporte a câmera, compartilhamento de tela, grade de vídeo compacta/expandida, e popover para controle de volume individual de cada participante.</p>
+            </div>
+
+            <div class="glass-card">
+                <h3> Sistema de Amigos</h3>
+                <p>Hub de amigos onde os usuários podem gerar "Friend Codes" customizados, aceitar/rejeitar convites, visualizar status de conexão (Online/Offline) e gerenciar bloqueios e interações rapidamente.</p>
+            </div>
+
+            <div class="glass-card">
+                <h3> Personalização "Liquid Glass"</h3>
+                <p>Design "Aesthetic" com suporte a temas Claro/Escuro, fundos customizados como o "Brazuca" e um editor de perfil com cores dinâmicas que alteram a opacidade e o "vidro" do layout dependendo do gosto do usuário.</p>
+            </div>
+        </div>
+
+        <h2 class="section-title">Log de Atualizações Recentes</h2>
+        <div class="update-log">
+            <div class="log-item">
+                <div class="version">v0.1.5</div>
+                <div class="log-content">
+                    <h4>Reforma Visual do Chat</h4>
+                    <p>Adicionado efeito liquid glass dinâmico nas mensagens, melhoria no espaçamento dos botões do compositor de mensagens (anexos e microfone) e refinamento do chat-header.</p>
+                </div>
+            </div>
+            <div class="log-item">
+                <div class="version">v0.0.15</div>
+                <div class="log-content">
+                    <h4>Atualização "Papagaio" (Idiomas)</h4>
+                    <p>Adicionado suporte robusto à seleção de idiomas na tela de autenticação inicial com menus dropdown personalizados.</p>
+                </div>
+            </div>
+            <div class="log-item">
+                <div class="version">v0.0.10</div>
+                <div class="log-content">
+                    <h4>Atualização "Bem-te-vi"</h4>
+                    <p>Reformulação da tela de setup inicial, permitindo aos usuários escolher fundos personalizados, temas com botões coloridos e configurar opções iniciais de performance e liquid effects.</p>
+                </div>
+            </div>
+            <div class="log-item">
+                <div class="version">v0.0.6</div>
+                <div class="log-content">
+                    <h4>Autenticação e Perfis</h4>
+                    <p>Criação do cartão de login animado, funcionalidade de "salvar contas", e um overlay de editor de perfil robusto que suporta avatares, banners em vídeo e personalização de cores.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+  </html>
+  
