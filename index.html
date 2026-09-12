@@ -356,6 +356,37 @@ footer{
     .section-title h2{font-size:29px}
     .log{flex-direction:column}
 }
+
+.devlog-gif-wrap{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:10px 0 60px;
+    transform:translateX(-320px);
+}
+
+.devlog-gif{
+    display:block;
+    width:300px;
+    height:auto;
+    max-width:70%;
+    object-fit:contain;
+    border-radius:10px;
+}
+
+@media(max-width:560px){
+    .devlog-gif-wrap{
+        transform:translateX(18px);
+        margin-bottom:50px;
+    }
+
+    .devlog-gif{
+        width:140px;
+        max-width:65%;
+    }
+}
+
 </style>
 </head>
 
@@ -392,13 +423,23 @@ footer{
                 <span>11 de Setembro de 2026 - Últimos anúncios</span>
             </div>
 
-            <div class="window-body">
-                <strong>MUDANÇA DE PLANOS</strong>
-                <h2>Sobre a contratação de moderação</h2>
-                <p>
-                    A equipe Brascord informa que não possuí mais vagas para a moderação de denúncias do Brascord.
-                </p>
-            </div>
+           <div class="window-body">
+    <strong>MUDANÇA DE PLANOS</strong>
+
+    <h2>Sobre a contratação de moderação</h2>
+
+    <p>
+        A equipe Brascord informa que não possuí mais vagas para a moderação de denúncias do Brascord.
+    </p>
+</div>
+
+    <div class="devlog-gif-wrap">
+        <img
+            src="assets/kuru.gif"
+            alt="Animação decorativa do BRASCORD"
+            class="devlog-gif"
+        >
+    </div>
         </div>
     </section>
 
