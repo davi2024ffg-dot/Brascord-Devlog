@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="BRASCORD — Portal oficial">
 <title>BRASCORD — Portal Oficial</title>
-
 <style>
 :root{
     --bg:#07110e;
@@ -18,333 +17,120 @@
     --blue:#2d98e8;
     --yellow:#ffd33d;
 }
-
 *{box-sizing:border-box}
-
 html{scroll-behavior:smooth}
-
 body{
-    margin:0;
-    background:var(--bg);
-    color:var(--text);
-    font-family:Inter,"Segoe UI",Arial,sans-serif;
-    line-height:1.5;
+    margin:0;background:var(--bg);color:var(--text);
+    font-family:Inter,"Segoe UI",Arial,sans-serif;line-height:1.5;
 }
-
-a{
-    color:inherit;
-    text-decoration:none;
-}
-
-.container{
-    width:min(1050px,92vw);
-    margin:auto;
-}
-
+a{color:inherit;text-decoration:none}
+.container{width:min(1050px,92vw);margin:auto}
 .topbar{
-    position:sticky;
-    top:0;
-    z-index:20;
-    background:rgba(7,17,14,.94);
-    border-bottom:1px solid var(--border);
-    backdrop-filter:blur(10px);
+    position:sticky;top:0;z-index:20;background:rgba(7,17,14,.94);
+    border-bottom:1px solid var(--border);backdrop-filter:blur(10px);
 }
-
 .topbar-inner{
-    min-height:64px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:20px;
+    min-height:64px;display:flex;align-items:center;
+    justify-content:space-between;gap:20px;
 }
-
-.brand{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    font-weight:900;
-}
-
+.brand{display:flex;align-items:center;gap:10px;font-weight:900}
 .logo{
-    width:34px;
-    height:34px;
-    border-radius:9px;
-    display:grid;
-    place-items:center;
-    font-weight:1000;
-    color:#08120f;
-    background:linear-gradient(135deg,var(--green),var(--blue));
+    width:34px;height:34px;border-radius:9px;display:grid;place-items:center;
+    font-weight:1000;color:#08120f;background:linear-gradient(135deg,var(--green),var(--blue));
 }
-
-.nav{
-    display:flex;
-    gap:5px;
-}
-
-.nav a{
-    padding:8px 11px;
-    border-radius:8px;
-    color:var(--muted);
-    font-size:13px;
-}
-
-.nav a:hover{
-    background:rgba(255,255,255,.05);
-    color:var(--text);
-}
-
-.hero{
-    padding:80px 0 55px;
-}
-
+.nav{display:flex;gap:5px}
+.nav a{padding:8px 11px;border-radius:8px;color:var(--muted);font-size:13px}
+.nav a:hover{background:rgba(255,255,255,.05);color:var(--text)}
+.hero{padding:80px 0 55px}
 .hero h1{
-    margin:0 0 14px;
-    font-size:clamp(48px,8vw,82px);
-    line-height:.92;
-    letter-spacing:-4px;
+    margin:0 0 14px;font-size:clamp(48px,8vw,82px);
+    line-height:.92;letter-spacing:-4px;
 }
-
-.green{color:var(--green)}
-.blue{color:var(--blue)}
-.yellow{color:var(--yellow)}
-
-.hero p{
-    max-width:680px;
-    margin:0;
-    color:var(--muted);
-    font-size:17px;
-}
-
-.buttons{
-    display:flex;
-    gap:10px;
-    flex-wrap:wrap;
-    margin-top:24px;
-}
-
+.green{color:var(--green)} .blue{color:var(--blue)} .yellow{color:var(--yellow)}
+.hero p{max-width:680px;margin:0;color:var(--muted);font-size:17px}
+.buttons{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
 .btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    padding:11px 15px;
-    border-radius:10px;
-    border:1px solid var(--border);
-    font-size:13px;
-    font-weight:800;
-    transition:.2s;
+    display:inline-flex;align-items:center;justify-content:center;
+    padding:11px 15px;border-radius:10px;border:1px solid var(--border);
+    font-size:13px;font-weight:800;transition:.2s;cursor:pointer;
 }
-
-.btn:hover{
-    transform:translateY(-2px);
-}
-
-.btn.primary{
-    color:#07120e;
-    background:var(--green);
-    border-color:transparent;
-}
-
-.btn.secondary{
-    color:#171308;
-    background:var(--yellow);
-    border-color:transparent;
-}
-
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{color:#07120e;background:var(--green);border-color:transparent}
+.btn.secondary{color:#171308;background:var(--yellow);border-color:transparent}
 .window{
-    margin:30px 0 70px;
-    border:1px solid var(--border);
-    border-radius:16px;
-    overflow:hidden;
-    background:var(--panel);
+    margin:30px 0 70px;border:1px solid var(--border);
+    border-radius:16px;overflow:hidden;background:var(--panel);
 }
-
 .window-head{
-    display:flex;
-    align-items:center;
-    gap:7px;
-    padding:11px 14px;
-    border-bottom:1px solid var(--border);
-    color:var(--muted);
-    font-size:12px;
+    display:flex;align-items:center;gap:7px;padding:11px 14px;
+    border-bottom:1px solid var(--border);color:var(--muted);font-size:12px;
 }
-
-.window-head i{
-    width:8px;
-    height:8px;
-    border-radius:50%;
-    background:#365047;
-}
-
-.window-body{
-    padding:24px;
-}
-
+.window-head i{width:8px;height:8px;border-radius:50%;background:#365047}
+.window-body{padding:24px}
 .window-body strong{
-    display:block;
-    color:var(--yellow);
-    font-size:12px;
-    letter-spacing:.12em;
-    margin-bottom:7px;
+    display:block;color:var(--yellow);font-size:12px;
+    letter-spacing:.12em;margin-bottom:7px;
 }
-
-.window-body h2{
-    margin:0 0 6px;
-    font-size:25px;
-}
-
-.window-body p{
-    margin:0;
-    color:var(--muted);
-    font-size:13px;
-}
-
-.section{
-    padding:0 0 70px;
-}
-
-.section-title{
-    margin-bottom:20px;
-}
-
+.window-body h2{margin:0 0 6px;font-size:25px}
+.window-body p{margin:0;color:var(--muted);font-size:13px}
+.section{padding:0 0 70px}
+.section-title{margin-bottom:20px}
 .section-title small{
-    color:var(--yellow);
-    font-size:11px;
-    font-weight:900;
-    letter-spacing:.14em;
-    text-transform:uppercase;
+    color:var(--yellow);font-size:11px;font-weight:900;
+    letter-spacing:.14em;text-transform:uppercase;
 }
-
-.section-title h2{
-    margin:7px 0 7px;
-    font-size:34px;
-    letter-spacing:-1.5px;
-}
-
-.section-title p{
-    margin:0;
-    color:var(--muted);
-}
-
-.grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:12px;
-}
-
+.section-title h2{margin:7px 0 7px;font-size:34px;letter-spacing:-1.5px}
+.section-title p{margin:0;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .card{
-    padding:18px;
-    border:1px solid var(--border);
-    border-radius:14px;
-    background:var(--panel);
+    padding:18px;border:1px solid var(--border);border-radius:14px;background:var(--panel);
 }
-
-.card:hover{
-    background:var(--panel2);
-}
-
-.card h3{
-    margin:0 0 6px;
-    font-size:16px;
-}
-
-.card p{
-    margin:0;
-    color:var(--muted);
-    font-size:13px;
-}
-
-.version{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:12px;
-}
-
-.box{
-    padding:22px;
-    border:1px solid var(--border);
-    border-radius:14px;
-    background:var(--panel);
-}
-
+.card:hover{background:var(--panel2)}
+.card h3{margin:0 0 6px;font-size:16px}
+.card p{margin:0;color:var(--muted);font-size:13px}
+.version{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:22px;border:1px solid var(--border);border-radius:14px;background:var(--panel)}
 .box .label{
-    color:var(--green);
-    font-size:11px;
-    font-weight:900;
-    letter-spacing:.12em;
-    text-transform:uppercase;
+    color:var(--green);font-size:11px;font-weight:900;
+    letter-spacing:.12em;text-transform:uppercase;
 }
-
-.box h3{
-    margin:8px 0;
-    font-size:26px;
-}
-
-.box p{
-    margin:0 0 15px;
-    color:var(--muted);
-    font-size:13px;
-}
-
+.box h3{margin:8px 0;font-size:26px}
+.box p{margin:0 0 15px;color:var(--muted);font-size:13px}
 .log{
-    padding:18px;
-    border:1px solid var(--border);
-    border-radius:14px;
-    background:var(--panel);
-    margin-bottom:10px;
-    display:flex;
-    gap:15px;
+    padding:18px;border:1px solid var(--border);border-radius:14px;
+    background:var(--panel);margin-bottom:10px;display:flex;gap:15px;
 }
-
 .log-version{
-    flex:0 0 auto;
-    height:max-content;
-    padding:6px 9px;
-    border-radius:8px;
-    background:rgba(36,201,120,.10);
-    color:var(--green);
-    font-size:11px;
-    font-weight:900;
+    flex:0 0 auto;height:max-content;padding:6px 9px;border-radius:8px;
+    background:rgba(36,201,120,.10);color:var(--green);
+    font-size:11px;font-weight:900;
 }
-
-.log h3{
-    margin:0 0 5px;
-    font-size:15px;
-}
-
-.log p{
-    margin:0;
-    color:var(--muted);
-    font-size:13px;
-}
-
+.log h3{margin:0 0 5px;font-size:15px}
+.log p{margin:0;color:var(--muted);font-size:13px}
 .simple-note{
-    padding:20px;
-    border-left:3px solid var(--blue);
-    background:rgba(45,152,232,.06);
-    color:var(--muted);
+    padding:20px;border-left:3px solid var(--blue);
+    background:rgba(45,152,232,.06);color:var(--muted);
     border-radius:0 10px 10px 0;
 }
-
-footer{
-    border-top:1px solid var(--border);
-    padding:28px 0 35px;
-    color:var(--muted);
-    font-size:12px;
+.terms-box{
+    padding:24px;border:1px solid var(--border);border-radius:14px;
+    background:var(--panel);
 }
-
+.terms-box pre{
+    margin:0;white-space:pre-wrap;word-break:break-word;
+    font-family:Inter,"Segoe UI",Arial,sans-serif;color:var(--muted);
+    font-size:13px;line-height:1.65;
+}
+.terms-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+footer{border-top:1px solid var(--border);padding:28px 0 35px;color:var(--muted);font-size:12px}
 .footer-inner{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:15px;
-    flex-wrap:wrap;
+    display:flex;align-items:center;justify-content:space-between;
+    gap:15px;flex-wrap:wrap;
 }
-
 @media(max-width:800px){
     .grid{grid-template-columns:1fr 1fr}
     .version{grid-template-columns:1fr}
 }
-
 @media(max-width:560px){
     .topbar-inner{min-height:58px}
     .nav a:nth-child(-n+2){display:none}
@@ -356,227 +142,316 @@ footer{
     .section-title h2{font-size:29px}
     .log{flex-direction:column}
 }
-
 .devlog-gif-wrap{
-    width:100%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    margin:10px 0 60px;
-    transform:translateX(-320px);
+    width:100%;display:flex;justify-content:center;align-items:center;
+    margin:10px 0 60px;transform:translateX(-320px);
 }
-
 .devlog-gif{
-    display:block;
-    width:300px;
-    height:auto;
-    max-width:70%;
-    object-fit:contain;
-    border-radius:10px;
+    display:block;width:300px;height:auto;max-width:70%;
+    object-fit:contain;border-radius:10px;
 }
-
 @media(max-width:560px){
-    .devlog-gif-wrap{
-        transform:translateX(18px);
-        margin-bottom:50px;
-    }
-
-    .devlog-gif{
-        width:140px;
-        max-width:65%;
-    }
+    .devlog-gif-wrap{transform:translateX(18px);margin-bottom:50px}
+    .devlog-gif{width:140px;max-width:65%}
 }
-
 </style>
 </head>
-
 <body>
-        <nav class="nav">
-            <a href="#recursos">Recursos</a>
-            <a href="#versao">Versão</a>
-            <a href="#devlog">Dev Log</a>
-            <a href="#sobre">Sobre</a>
-            <a href="https://davi2024ffg-dot.github.io/Brascord-Devlog/">Dev Log oficial</a>
-        </nav>
-    </div>
+
+<header class="topbar">
+<div class="container topbar-inner">
+    <a class="brand" href="#">
+        <span class="logo">B</span>
+        <span>BRASCORD</span>
+    </a>
+    <nav class="nav">
+        <a href="#recursos">Recursos</a>
+        <a href="#versao">Versão</a>
+        <a href="#devlog">Dev Log</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#termos">Termos</a>
+        <a href="https://davi2024ffg-dot.github.io/Brascord-Devlog/">Dev Log oficial</a>
+    </nav>
+</div>
 </header>
 
 <main class="container">
 
-    <section class="hero">
-        <h1>
-            <span class="green">BRA</span><span class="blue">SC</span><span class="yellow">ORD</span><span class="white"> PORTAL</span>
-        </h1>
-
-        <p>
-            Bem-vindo(a) ao portal de atualizações e notícias do Brascord feito por Davi Alves e Vinícius Firmiano, para mais informações acesse https://www.tiktok.com/@teragamesofficial.
-        </p>
-
-        <div class="buttons">
-            <a class="btn primary" href="https://davi2024ffg-dot.github.io/Brascord-Devlog/">Ver Dev Log</a>
-            <a class="btn secondary" href="#recursos">O que há de novo?</a>
-        </div>
-
-        <div class="window">
-            <div class="window-head">
-                <i></i><i></i><i></i>
-                <span>12 de Setembro de 2026 - Últimos anúncios</span>
-            </div>
-
-           <div class="window-body">
-    <strong>DEMO CADA VEZ MAIS PRÓXIMA</strong>
-
-    <h2>Versão de demostração do Brascord</h2>
-
+<section class="hero">
+    <h1>
+        <span class="green">BRA</span><span class="blue">SC</span><span class="yellow">ORD</span> PORTAL
+    </h1>
     <p>
-        A equipe Brascord informa que em breve será lançada a versão de navegador e apk android do Brascord, futuramente na versão definitiva há probabilidade de ser lançada uma versão para iphone, portanto, na demo terá apenas as principais funções do Brascord.
+        Bem-vindo(a) ao portal de atualizações e notícias do Brascord feito por Davi Alves e Vinícius Firmiano, para mais informações acesse https://www.tiktok.com/@teragamesofficial.
     </p>
-</div>
-
-    <div class="devlog-gif-wrap">
-        <img
-            src="assets/kuru.gif"
-            alt="Animação decorativa do BRASCORD"
-            class="devlog-gif"
-        >
+    <div class="buttons">
+        <a class="btn primary" href="https://davi2024ffg-dot.github.io/Brascord-Devlog/">Ver Dev Log</a>
+        <a class="btn secondary" href="#recursos">O que há de novo?</a>
     </div>
+
+    <div class="window">
+        <div class="window-head">
+            <i></i><i></i><i></i>
+            <span>13 de Setembro de 2026 - Últimos anúncios</span>
         </div>
-    </section>
-
-    <section class="section" id="recursos">
-        <div class="section-title">
-            <small>Recursos</small>
-            <h2>O que há de novo?</h2>
-            <p>Coisas importantes pra não ficar perguntando depois.</p>
+        <div class="window-body">
+            <strong>1.000 Visitas</strong>
+            <h2>Portal Brascord atinge 1000 na primeira semana de estreia</h2>
+            <p>
+                Obrigado a todos que apoiam esse projeto e o acompanham, cada dia que passa a versão de demonstração está mais próxima!
+            </p>
         </div>
-
-        <div class="grid">
-            <article class="card">
-                <h3>Chat e mensagens</h3>
-                <p>Da pra mandar mensagens, fazer reações, encaminhar mensagens, enviar emojis e anexos.</p>
-            </article>
-
-            <article class="card">
-                <h3>Grupos</h3>
-                <p>Ainda é bem beta mas estamos no caminho certo.</p>
-            </article>
-
-            <article class="card">
-                <h3>Chamadas</h3>
-                <p>Esse foi bem trabalhoso, mas eu diria que está bem completo, podendo transmitir tela e call em vários dispositivos.</p>
-            </article>
-
-            <article class="card">
-                <h3>Transmissão de tela</h3>
-                <p>Esse me pediram muito >: , funciona muito bem!, só falta alguns ajustes.</p>
-            </article>
-
-            <article class="card">
-                <h3>Amigos</h3>
-                <p>Já é possível criar códigos de amizades e enviar para seus amigos!.</p>
-            </article>
-
-            <article class="card">
-                <h3>Mídia</h3>
-                <p>Agora é possível enviar vídeos, fotos e arquivos para seus contatos!, você pode baixar imagens com resolução reduzida ou original.</p>
-            </article>
+        <div class="devlog-gif-wrap">
+            <img src="assets/kuru.gif" alt="Animação decorativa do BRASCORD" class="devlog-gif">
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="section" id="versao">
-        <div class="version">
-            <div class="box">
-                <div class="label">Versão atual</div>
-                <h3>2.5.0 <span class="yellow">“ISAQUE”</span></h3>
-                <p>
-                    É definitivamente uma das versões mais completas que já fiz, nos vídeos eu prometi que nessa versão vai ter o layout mobile, será possível criar grupos e denúnciar pessoas, tá bem difícil, agora essa versão já tem 7 dias de desenvolvimento.
-                </p>
-                <div class="buttons">
-                    <a class="btn primary" href="https://davi2024ffg-dot.github.io/Brascord-Devlog/">Abrir Dev Log</a>
-                </div>
-            </div>
+<section class="section" id="recursos">
+    <div class="section-title">
+        <small>Recursos</small>
+        <h2>O que há de novo?</h2>
+        <p>Coisas importantes que fizemos nos últimos dias.</p>
+    </div>
+    <div class="grid">
+        <article class="card"><h3>Fim das vagas de moderadores</h3><p>Não há mais vagas para moderadores do Brascord, lotou muito rápido.</p></article>
+        <article class="card"><h3>Grupos</h3><p>Ainda é bem beta mas estamos no caminho certo.</p></article>
+        <article class="card"><h3>Chamadas</h3><p>Esse foi bem trabalhoso, mas eu diria que está bem completo, podendo transmitir tela e call em vários dispositivos.</p></article>
+        <article class="card"><h3>Transmissão de tela</h3><p>Esse me pediram muito &gt;: , funciona muito bem!, só falta alguns ajustes.</p></article>
+        <article class="card"><h3>Amigos</h3><p>Já é possível criar códigos de amizades e enviar para seus amigos!.</p></article>
+        <article class="card"><h3>Mídia</h3><p>Agora é possível enviar vídeos, fotos e arquivos para seus contatos!, você pode baixar imagens com resolução reduzida ou original.</p></article>
+    </div>
+</section>
 
-            <div class="box">
-                <div class="label">Status</div>
-                <h3>Em desenvolvimento</h3>
-                <p>
-                    A gente ainda não lançou a versão demo do Brascord, queremos garantir a segurança do projeto primeiro e criar as principais funções. Novidades e correções serão publicadas no Dev Log.
-                </p>
+<section class="section" id="versao">
+    <div class="version">
+        <div class="box">
+            <div class="label">Versão atual</div>
+            <h3>2.5.0 <span class="yellow">“ISAQUE”</span></h3>
+            <p>É definitivamente uma das versões mais completas que já fiz, nos vídeos eu prometi que nessa versão vai ter o layout mobile, será possível criar grupos e denúnciar pessoas, tá bem difícil, agora essa versão já tem 7 dias de desenvolvimento.</p>
+            <div class="buttons">
+                <a class="btn primary" href="https://davi2024ffg-dot.github.io/Brascord-Devlog/">Abrir Dev Log</a>
             </div>
         </div>
-    </section>
-
-    <section class="section" id="devlog">
-        <div class="section-title">
-            <small>Histórico</small>
-            <h2>Versões importantes</h2>
-            <p>Conheça algumas versões que levamos mais trabalho.</p>
+        <div class="box">
+            <div class="label">Status</div>
+            <h3>Em desenvolvimento</h3>
+            <p>A gente ainda não lançou a versão demo do Brascord, queremos garantir a segurança do projeto primeiro e criar as principais funções. Novidades e correções serão publicadas no Dev Log.</p>
         </div>
+    </div>
+</section>
 
-        <article class="log">
-            <span class="log-version">2.5.0</span>
-            <div>
-                <h3>Isaque</h3>
-                <p>Expansão dos recursos de grupos, chamadas e denúncias.</p>
-            </div>
-        </article>
+<section class="section" id="devlog">
+    <div class="section-title">
+        <small>Histórico</small>
+        <h2>Versões importantes</h2>
+        <p>Conheça algumas versões que levamos mais trabalho.</p>
+    </div>
+    <article class="log"><span class="log-version">2.5.0</span><div><h3>Isaque</h3><p>Expansão dos recursos de grupos, chamadas e denúncias.</p></div></article>
+    <article class="log"><span class="log-version">0.1.5</span><div><h3>Bambolê</h3><p>Melhorias no chat, compositor de mensagens, anexos e interface.</p></div></article>
+    <article class="log"><span class="log-version">0.0.15</span><div><h3>Papagaio</h3><p>Suporte à seleção de idiomas e evolução da experiência inicial.</p></div></article>
+    <article class="log"><span class="log-version">0.0.10</span><div><h3>Bem-te-vi</h3><p>Personalização inicial, fundos, temas e opções de desempenho.</p></div></article>
+    <article class="log"><span class="log-version">0.0.6</span><div><h3>Arara Azul</h3><p>Login, contas salvas e editor de perfis.</p></div></article>
+</section>
 
-        <article class="log">
-            <span class="log-version">0.1.5</span>
-            <div>
-                <h3>Bambolê</h3>
-                <p>Melhorias no chat, compositor de mensagens, anexos e interface.</p>
-            </div>
-        </article>
+<section class="section" id="sobre">
+    <div class="section-title">
+        <small>Apoio ao desenvolvedores</small>
+        <h2>TERA GAMES AMERICA 2026.</h2>
+    </div>
+    <div class="simple-note">
+        O projeto tem o apoio da Tera Games America.
+        Programadores da Tera Games que ajudaram <strong>Julia Lima</strong>,
+        <strong>Rafael monteiro</strong>, <strong>Pedro santos</strong>,
+        <strong>Guilherme silva</strong>, <strong>Gabriel bragatto</strong> e
+        <strong>João alves</strong>
+    </div>
+</section>
 
-        <article class="log">
-            <span class="log-version">0.0.15</span>
-            <div>
-                <h3>Papagaio</h3>
-                <p>Suporte à seleção de idiomas e evolução da experiência inicial.</p>
-            </div>
-        </article>
-
-        <article class="log">
-            <span class="log-version">0.0.10</span>
-            <div>
-                <h3>Bem-te-vi</h3>
-                <p>Personalização inicial, fundos, temas e opções de desempenho.</p>
-            </div>
-        </article>
-
-        <article class="log">
-            <span class="log-version">0.0.6</span>
-            <div>
-                <h3>Arara Azul</h3>
-                <p>Login, contas salvas e editor de perfis.</p>
-            </div>
-        </article>
-    </section>
-
-    <section class="section" id="sobre">
-        <div class="section-title">
-            <small>Apoio ao desenvolvedores</small>
-            <h2>TERA  GAMES AMERICA 2026.</h2>
+<section class="section" id="termos">
+    <div class="section-title">
+        <small>Documento de Termos</small>
+        <h2>Esses são os Termos de uso e privacidade do nosso projeto</h2>
+        <p>Você também pode baixar eles em formato TXT.</p>
+    </div>
+    <div class="terms-box">
+        <pre id="termsText"></pre>
+        <div class="terms-actions">
+            <a class="btn primary" id="downloadTerms" download="BRASCORD-Termos-de-Uso.txt">Baixar termos (.txt)</a>
         </div>
-
-        <div class="simple-note">
-            O projeto tem o apoio da Tera Games America.
-            Programadores da Tera Games que ajudaram <strong>Julia Lima</strong> ,
-            <strong>Rafael monteiro</strong> , <strong>Pedro santos</strong> ,
-            <strong>Guilherme silva</strong>, <strong>Gabriel bragatto</strong> e
-            <strong>João alves</strong>
-        </div>
-    </section>
+    </div>
+</section>
 
 </main>
 
 <footer>
-    <div class="container footer-inner">
-        <span>BRASCORD — Portal oficial</span>
-        <span>Projeto em desenvolvimento · 2026</span>
-    </div>
+<div class="container footer-inner">
+    <span>BRASCORD — Portal oficial</span>
+    <span>Projeto em desenvolvimento · 2026</span>
+</div>
 </footer>
+
+<script>
+const termos = `🇧🇷 BRASCORD
+
+Termos de Uso e Condições
+
+1. Sobre o Brascord
+
+O Brascord é um projeto de plataforma de comunicação desenvolvido com o objetivo de oferecer comunicação por texto, voz e comunidades, priorizando acessibilidade, privacidade e segurança dos usuários.
+
+Nesta versão, o Brascord encontra-se em fase de protótipo e desenvolvimento. Algumas funções podem estar incompletas, sofrer alterações ou não representar a versão final do serviço.
+
+2. Aceitação dos termos
+
+Ao utilizar o Brascord, o usuário declara que leu e compreendeu estes Termos de Uso e concorda em respeitá-los.
+
+Caso não concorde com estes termos, não deverá utilizar o serviço.
+
+Para utilizar nossos serviços você deverá ter pelo menos 13 anos no mínimo 
+
+3. Segurança e privacidade
+
+O Brascord busca desenvolver seus sistemas priorizando a segurança dos usuários.
+
+Entre os princípios previstos para a plataforma estão:
+
+- Perfis privados por padrão;
+- Controle sobre quem pode entrar em contato com o usuário;
+- Sistema de amizade baseado em autorização;
+- Códigos temporários para adicionar amigos;
+- Ferramentas de bloqueio e denúncia;
+- Proteção contra spam e abuso;
+- Ferramentas de gerenciamento de sessões e dispositivos.
+
+Nenhuma medida de segurança pode garantir proteção absoluta. O Brascord buscará continuamente identificar e corrigir vulnerabilidades.
+
+4. Sistema de amizade
+
+O Brascord poderá utilizar um sistema de códigos temporários para adicionar amigos.
+
+O código:
+
+- Será gerado pelo usuário;
+- Terá validade limitada;
+- Poderá expirar automaticamente;
+- Não deverá ser compartilhado publicamente quando o usuário não desejar receber novas solicitações.
+
+O usuário terá controle sobre quem poderá fazer parte de sua lista de amigos.
+
+5. Mensagens e comunicação
+
+O Brascord poderá restringir o recebimento de mensagens de pessoas que não estejam autorizadas pelo usuário.
+
+É proibido utilizar a plataforma para:
+
+- Assediar ou perseguir outras pessoas;
+- Ameaçar usuários;
+- Enviar spam;
+- Praticar golpes ou fraudes;
+- Compartilhar conteúdo ilegal;
+- Compartilhar conteúdo sexual envolvendo menores;
+- Incentivar violência ou atividades perigosas;
+- Tentar obter informações privadas de outros usuários;
+- Utilizar a plataforma para qualquer atividade que viole a legislação aplicável.
+
+6. Conteúdo impróprio
+
+O usuário é responsável pelo conteúdo que publica, envia ou compartilha.
+
+Conteúdos que violem estes termos poderão ser removidos.
+
+Dependendo da gravidade da situação, a conta poderá receber uma advertência, sofrer limitações temporárias ou ser suspensa.
+
+7. Sistema de denúncias
+
+O Brascord disponibilizará ferramentas para denunciar:
+
+- Perfis impróprios;
+- Mensagens impróprias;
+- Imagens ou figurinhas impróprias;
+- Spam;
+- Assédio;
+- Outros comportamentos que violem estes termos.
+
+Sempre que possível, o denunciante deverá apresentar evidências e explicar o motivo da denúncia.
+
+Uma determinada quantidade de denúncias não significa automaticamente que uma conta será banida.
+
+As denúncias poderão ser analisadas pela equipe responsável pela moderação, que poderá considerar as evidências disponíveis, o contexto e o histórico da situação.
+
+8. Suspensão e encerramento de contas
+
+Uma conta poderá ser suspensa ou encerrada quando houver violação destes termos ou quando forem identificadas atividades que representem risco significativo para a comunidade.
+
+Medidas contra contas poderão incluir:
+
+- Advertência;
+- Remoção de conteúdo;
+- Restrição temporária de funcionalidades;
+- Suspensão temporária;
+- Suspensão permanente.
+
+Quando tecnicamente e legalmente apropriado, mecanismos de segurança poderão ser utilizados para dificultar a criação de novas contas destinadas a contornar uma suspensão.
+
+9. Direito de recurso
+
+Caso o usuário considere que sua conta foi suspensa ou encerrada injustamente, poderá solicitar uma revisão da decisão por meio do canal oficial de suporte disponibilizado pelo Brascord.
+
+A equipe poderá analisar novamente o caso e, quando apropriado, reverter a medida aplicada.
+
+10. Uso responsável
+
+O Brascord deve ser utilizado de maneira responsável e respeitosa.
+
+O usuário não deverá tentar:
+
+- Invadir contas;
+- Burlar sistemas de segurança;
+- Explorar vulnerabilidades;
+- Interferir no funcionamento da plataforma;
+- Automatizar ações de maneira abusiva;
+- Obter acesso não autorizado a dados;
+- Contornar suspensões ou restrições.
+
+11. Alterações no serviço
+
+O Brascord está em desenvolvimento.
+
+Funcionalidades, interfaces, regras e sistemas poderão ser modificados, adicionados ou removidos durante o desenvolvimento.
+
+Alterações importantes nos Termos de Uso deverão ser comunicadas aos usuários quando aplicável.
+
+12. Proteção de menores
+
+O Brascord busca reduzir formas de contato indesejado e oferecer ferramentas que contribuam para uma comunidade mais segura.
+
+Entretanto, nenhum sistema consegue garantir proteção absoluta contra comportamentos abusivos.
+
+Usuários devem utilizar as ferramentas de bloqueio e denúncia sempre que identificarem uma situação inadequada.
+
+13. Contato
+
+Dúvidas, solicitações de suporte, recursos de suspensão e questões relacionadas ao Brascord deverão ser encaminhados pelo canal oficial de contato disponibilizado pela equipe.
+
+E-mail oficial: teragamesamerica@gmail.com
+
+14. Versão do documento
+
+Os termos poderão ser revisados antes do lançamento de versões públicas ou comerciais do Brascord.
+
+---
+
+BRASCORD 🇧🇷
+
+Comunicação com privacidade, segurança e simplicidade.`;
+
+document.getElementById("termsText").textContent = termos;
+
+const arquivo = new Blob([termos], {type:"text/plain;charset=utf-8"});
+const url = URL.createObjectURL(arquivo);
+document.getElementById("downloadTerms").href = url;
+</script>
 
 </body>
 </html>
